@@ -1,0 +1,113 @@
+/* :root{
+  --corPrimaria:background-color ;
+} */
+*{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color:rgb(26, 202, 202) ;
+}
+body{
+  background-color: rgb(26, 202, 202);
+}
+.container_0{
+display: flex;
+/* flex-direction: column; */
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+/* margin-top: 50px; */
+
+}
+.container_01{
+  max-width: 230px;
+  background-color: #fff; 
+  padding: 15px;
+  margin: 5px;
+  height: auto;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5),
+              -3px -3px 8px rgba(0, 0, 0, 0.5);
+}
+.criarForm{
+
+  display: flex;
+  background-color: #fff;
+  height: auto;
+  font-size: 1.2rem;
+  flex-wrap: wrap;
+}
+span{
+  margin: 15px 15px 0 15px;
+  font-weight: 600;
+  display: inline-block;
+}
+input{
+  margin-top: 5px;
+  outline: 0;
+  color: black;
+ 
+}
+button{
+  cursor: pointer;
+  margin: 10px 10px 0 20px;
+  min-width: 80px;
+  height: 25px;
+  background-color: rgb(26, 202, 202);
+  color: #fff;
+  outline: 0;
+  border: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+              
+}
+button:hover{
+  background-color: rgb(34, 230, 230);
+}
+legend, .titulo{
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgba(65, 65, 65, 0.6);
+}
+
+.totalGastos{
+  max-width: 230px;
+  background-color: #fff; 
+  padding: 15px;
+  margin: 5px;
+  height: auto;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5),
+              -3px -3px 8px rgba(0, 0, 0, 0.5);
+}
+.container_02{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  
+}
+.container_03{
+  display: flex;
+  justify-content: center;
+  }
+.receita{
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  max-width: 500px;
+  background-color: #fff; 
+  padding: 15px;
+  margin: 5px;
+  height: auto;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5),
+              -3px -3px 8px rgba(0, 0, 0, 0.5);
+}
+.receita span{
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  width: 230px;
+  max-width: 230px;
+  min-height: 30px;
+}
+
