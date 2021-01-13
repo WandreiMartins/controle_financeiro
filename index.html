@@ -14,17 +14,21 @@
 
 <body>
   <div class="container_03">
-    <div class="receita">
+    <div class="receita" id="receita">
       <div class="titulo">Receitas</div>
-      <div>
-        <span>Nome Receitas:</span><input type="number">
-      </div>
+
     </div>
   </div>
   <div class="container_03">
     <div class="receita" id="despesas">
       <div class="titulo">Despesas</div>
-
+      <div class="RecDes" id="item">
+        <span>${nomeReceita}:</span><input type="number" id="nomeR${identidade}">
+        <div class="btn" id="btn" onclick="removerItem()">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container_02">
@@ -59,27 +63,27 @@
 
         </label>
         <label>
-          <span>Valor do campo&nbsp;</span>
+          <span>Valor do campo</span>
           <input type="number" id="nomeValor">
         </label>
-        <button id="CriarGasto" onclick="criarGasto()">Criar</button>
+        <button onclick="criarGasto()">Criar</button>
       </div>
 
     </div>
     <div class="container_01">
       <legend>Adicionar receita</legend>
+
       <div class="criarForm">
         <label>
           <span>Nome do campo</span>
-          <input type="text">
-
+          <input type="text" id="nomeReceita">
         </label>
         <label>
-          <span>Valor do campo&nbsp;</span> <input type="number">
+          <span>Valor do campo</span>
+          <input type="number" id="nomeValorReceita">
         </label>
-        <button>Criar</button>
+        <button onclick="criarReceita1()">Criar</button>
       </div>
-
     </div>
   </div>
   <script src="script.js">

@@ -1,13 +1,15 @@
-/* :root{
-  --corPrimaria:background-color ;
-} */
+:root{
+  --corPrimaria:rgb(26, 202, 202);
+  --corSegudanria:rgb(255, 255, 255) ;
+  --corTerciaria:rgba(65, 65, 65, 0.6)
+}
 *{
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
-  color:rgb(26, 202, 202) ;
+  color:var(--corPrimaria);
 }
 body{
-  background-color: rgb(26, 202, 202);
+  background-color:var(--corPrimaria);
 }
 .container_0{
 display: flex;
@@ -20,7 +22,7 @@ flex-wrap: wrap;
 }
 .container_01{
   max-width: 230px;
-  background-color: #fff; 
+  background-color:var(--corSegudanria); 
   padding: 15px;
   margin: 5px;
   height: auto;
@@ -30,7 +32,7 @@ flex-wrap: wrap;
 .criarForm{
 
   display: flex;
-  background-color: #fff;
+  background-color: var(--corSegudanria);
   height: auto;
   font-size: 1.2rem;
   flex-wrap: wrap;
@@ -42,36 +44,45 @@ span{
 }
 input{
   margin-top: 5px;
+  font-weight: 600;
   outline: 0;
-  color: black;
- 
+  color: black; 
+  border: 1px solid var(--corTerciaria);
+  /* border: none; */
+  border-radius: 5px;
+  background-color: var(--corSegudanria); 
+  text-align: center;
+}
+input:focus{
+  box-shadow: 1px 1px 4px var(--corPrimaria),
+            -1px -1px 4px var(--corPrimaria);
 }
 button{
   cursor: pointer;
   margin: 10px 10px 0 20px;
   min-width: 80px;
   height: 25px;
-  background-color: rgb(26, 202, 202);
-  color: #fff;
+  background-color: var(--corPrimaria);
+  color: var(--corSegudanria);
   outline: 0;
   border: none;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
               
 }
 button:hover{
-  background-color: rgb(34, 230, 230);
+  background-color: var(--corPrimaria);
 }
 legend, .titulo{
   display: block;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 15px;
-  color: rgba(65, 65, 65, 0.6);
+  color: var(--corTerciaria);
 }
 
 .totalGastos{
   max-width: 230px;
-  background-color: #fff; 
+  background-color: var(--corSegudanria); 
   padding: 15px;
   margin: 5px;
   height: auto;
@@ -95,7 +106,7 @@ legend, .titulo{
   flex-wrap: wrap;
   width: 500px;
   max-width: 500px;
-  background-color: #fff; 
+  background-color: var(--corSegudanria); 
   padding: 15px;
   margin: 5px;
   height: auto;
@@ -109,5 +120,60 @@ legend, .titulo{
   width: 230px;
   max-width: 230px;
   min-height: 30px;
+}
+.RecDes{
+  background-color: var(--corSegudanria);
+  padding: 5px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+    box-shadow:2px 2px 6px rgb(197, 197, 197),
+    -2px -2px 6px rgb(197, 197, 197); 
+}
+.RecDes span{
+  position: relative;
+  top: 5px;
+  right: 30px;
+  margin: 0;
+  text-align: center;
+  width: 230px;
+  max-width: 230px;
+}
+.RecDes input{
+  margin: 0;
+  position: relative;
+  right: 30px;
+}
+.btn{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 55, 55);
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+ .btn span{
+  
+  display: inline-block;
+  width: 2px;
+  height: 30px;
+  min-height: 30px;
+  background-color: rgb(0, 0, 0);
+}
+.btn span:nth-child(1){
+  transform: rotate(45deg);
+  top: -7px;
+  right: -12px;
+}
+.btn span:nth-child(2){
+  transform: rotate(-45deg);
+  top: -7px;
+  right: 0px;
+}
+.divBtn{
+  margin: 5px auto ;
+
 }
 
