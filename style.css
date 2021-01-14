@@ -101,7 +101,7 @@ legend, .titulo{
   display: flex;
   justify-content: center;
   }
-.receita{
+.receitas_01{
   display: flex;
   flex-wrap: wrap;
   width: 500px;
@@ -113,25 +113,24 @@ legend, .titulo{
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5),
               -3px -3px 8px rgba(0, 0, 0, 0.5);
 }
-.receita span{
+.receitas_01 span{
   margin: 0;
   flex-grow: 1;
   text-align: center;
   width: 230px;
   max-width: 230px;
-  min-height: 30px;
 }
-.RecDes{
+.despesas, .receitas{
+  margin: 10px auto; 
   background-color: var(--corSegudanria);
   padding: 5px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
     box-shadow:2px 2px 6px rgb(197, 197, 197),
     -2px -2px 6px rgb(197, 197, 197); 
 }
-.RecDes span{
+..despesas span, .receitas span{
   position: relative;
   top: 5px;
   right: 30px;
@@ -139,8 +138,10 @@ legend, .titulo{
   text-align: center;
   width: 230px;
   max-width: 230px;
+  
+  
 }
-.RecDes input{
+.despesas input, .receitas input{
   margin: 0;
   position: relative;
   right: 30px;
@@ -155,25 +156,17 @@ legend, .titulo{
   cursor: pointer;
 }
  .btn span{
-  
-  display: inline-block;
-  width: 2px;
-  height: 30px;
-  min-height: 30px;
-  background-color: rgb(0, 0, 0);
-}
-.btn span:nth-child(1){
-  transform: rotate(45deg);
-  top: -7px;
-  right: -12px;
-}
-.btn span:nth-child(2){
-  transform: rotate(-45deg);
-  top: -7px;
+  position: relative;
+  top: -1px;
   right: 0px;
+  display: inline-block;
+  width: 20px;
+  color: black;
+  font-size: 17px;
+  min-height: 0px;
 }
-.divBtn{
-  margin: 5px auto ;
+.divClasse{
+  /* margin: auto; */
+}
 
-}
 
