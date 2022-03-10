@@ -1,88 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <!-- ---Fonts -->
+    
+    <!-- ---Fonts -->
+    <!-- CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
 </head>
-
 <body>
-  <div class="container_03">
-    <div class="receitas_01" id="receita">
-      <div class="titulo">Receitas</div>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <p>CF</p>
+                </span>
+                <div class="text header-text">
+                    <span class="name">Controle Financeiro</span>
+                    
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt icon'></i>
+                            <span class="text nav-text">Evolução</span>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Item 03</span>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Item 04</span>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Item 05</span>
+                        </a>
+                        
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="text nav-text">Item 06</span>
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div class="botton-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                    
+                </li>
 
-    </div>
-  </div>
-  <div class="container_03">
-    <div class="receitas_01" id="despesas">
-      <div class="titulo">Despesas</div>
+                <li class="mode">
+                    
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
 
-    </div>
-  </div>
-  <div class="container_02">
-    <div class="totalGastos">
-      <legend>Total de gastos</legend>
-      <div class="criarForm">
-        <label>
-
-          <input type="number">
-        </label>
-        <button>Calcular</button>
-      </div>
-    </div>
-    <div class="totalGastos">
-      <legend>Poupança</legend>
-      <div class="criarForm">
-        <label>
-          <input type="number">
-        </label>
-        <button>Calcular</button>
-      </div>
-    </div>
-  </div>
-  <div class="container_0">
-
-    <div class="container_01">
-      <legend>Adicionar gastos</legend>
-      <div class="criarForm">
-        <label>
-          <span>Nome do campo</span>
-          <input type="text" id="nomeGasto">
-
-        </label>
-        <label>
-          <span>Valor do campo</span>
-          <input type="number" id="nomeValor">
-        </label>
-        <button onclick="criarGasto()">Criar</button>
-      </div>
-
-    </div>
-    <div class="container_01">
-      <legend>Adicionar receita</legend>
-
-      <div class="criarForm">
-        <label>
-          <span>Nome do campo</span>
-          <input type="text" id="nomeReceita">
-        </label>
-        <label>
-          <span>Valor do campo</span>
-          <input type="number" id="nomeValorReceita">
-        </label>
-        <button onclick="criarReceita()">Criar</button>
-      </div>
-    </div>
-  </div>
-  <script src="script.js">
-
-  </script>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="gastos-diarios">
+            <div class="title">Gastos diários</div>
+            <form action="" class="formulario">
+                <label for="meses">Selecione um mês:</label>
+                <select id="meses" name="meses">
+                  <option value="Janeiro">Janeiro</option>
+                  <option value="Fevereiro">Fevereiro</option>
+                  <option value="Março">Março</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Maio">Maio</option>
+                  <option value="Junho">Junho</option>
+                  <option value="Julho">Julho</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Setembro">Setembro</option>
+                  <option value="Outubro">Outubro</option>
+                  <option value="Novembro">Novembro</option>
+                  <option value="Dezembro">Dezembro</option>
+                </select>
+                
+              </form>
+              <div class="gastos" id="gastos">
+                  
+              </div>
+        </div>
+        <div class="grafico-g-diarios">
+            <div class="title">Grafico de gastos diários</div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container_03">
+    <div class="receitas_01" id="receita">
+      <div class="titulo">Receitas</div>
+
+    </div>
+  </div>
+  <div class="container_03">
+    <div class="receitas_01" id="despesas">
+      <div class="titulo">Despesas</div>
+
+    </div>
+  </div>
+  <div class="container_02">
+    <div class="totalGastos">
+      <legend>Total de gastos</legend>
+      <div class="criarForm">
+        <label>
+
+          <input type="number">
+        </label>
+        <button>Calcular</button>
+      </div>
+    </div>
+    <div class="totalGastos">
+      <legend>Poupança</legend>
+      <div class="criarForm">
+        <label>
+          <input type="number">
+        </label>
+        <button>Calcular</button>
+      </div>
+    </div>
+  </div>
+  <div class="container_0">
+
+    <div class="container_01">
+      <legend>Adicionar gastos</legend>
+      <div class="criarForm">
+        <label>
+          <span>Nome do campo</span>
+          <input type="text" id="nomeGasto">
+
+        </label>
+        <label>
+          <span>Valor do campo</span>
+          <input type="number" id="nomeValor">
+        </label>
+        <button onclick="criarGasto()">Criar</button>
+      </div>
+
+    </div>
+    <div class="container_01">
+      <legend>Adicionar receita</legend>
+
+      <div class="criarForm">
+        <label>
+          <span>Nome do campo</span>
+          <input type="text" id="nomeReceita">
+        </label>
+        <label>
+          <span>Valor do campo</span>
+          <input type="number" id="nomeValorReceita">
+        </label>
+        <button onclick="criarReceita()">Criar</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js">
+
+  </script>
+</body>
+
+</html>
