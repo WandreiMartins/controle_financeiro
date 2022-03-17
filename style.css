@@ -16,6 +16,9 @@
     --toggle-color:#ddd;
     --text-color:#707070;
     --text-color2:rgb(29, 29, 29);
+    --cinza-menor:rgb(207, 207, 207);
+    --preto:#000000;
+
 
 
 
@@ -264,7 +267,8 @@ body.dark .switch::before{
 .home select{
     color: var( --text-color2);
     outline: none;
-    border: 1px solid var(--text-color);
+    border: none;
+    border-bottom: 1px solid var(--text-color);
 }
 .sidebar.close ~ .home{
     left: 88px;
@@ -277,12 +281,52 @@ body.dark .switch::before{
     padding: 10px 0 10px 15px;
 }
 .gastos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
     overflow: scroll;
     width: 100%;
     height: 80%;
-    /* border: 1px solid rgb(17, 0, 255); */
+    
 }
 .gastos .gastoDoDia{
-    border: 1px solid var(--text-color);
-    margin: 5px 0;
+    
+    min-width: 100px;
+    color: var(--text-color);
+    border-radius: 6px;
+    /* border: 1px solid var(--text-color); */
+    margin: 5px 0px;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    /* background: var(--primary-color); */
+}
+.gastos .gastoDoDia p{
+    padding-left: 10px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.gastos .gastoDoDia .formulario form{
+    display: flex;
+}
+.gastos .gastoDoDia .formulario form div{
+    color: var(--preto);
+}
+.gastos .gastoDoDia select{
+    margin: 0 10px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+}
+.gastos .gastoDoDia select option:nth-child(1){
+    color: var(--cinza-menor);
+}
+.gastos .gastoDoDia label{
+    margin: 0 10px;
+}
+.gastos .gastoDoDia  input{
+    width: 60px ;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
 }
