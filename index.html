@@ -121,11 +121,11 @@
               </form>
               <div class="gastos">
                   <!-- <div class="gastoDoDia">
-                      <p>Dia 01</p>
+                      <p class="dia">Dia 01</p>
                       <div class="formulario">
                         <form action="">
                             <label for="meses">Gasto com:</label>
-                            <div>Padaria: 5,00</div>
+                            <div class='tag'><p id="item"></p> <p class="valor"></p></div>
                             <select id="classesDeGasto" name="meses">
                             <option value="Selecione">Selecione</option>
                             
@@ -137,7 +137,10 @@
                             <option value="Internet">Internet</option>
                             <option value="Saúde">Saúde</option>
                             </select>
-                            <input type="number" placeholder="R$">
+                            <input type="number" placeholder="R$" id="valorInput">
+                            <div class='btn'>Incluir</div>
+
+                        
 
                         </form>
                         </div>

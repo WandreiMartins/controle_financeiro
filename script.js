@@ -31,31 +31,49 @@ const body = document.querySelector('body'),
         <div class="formulario">
           <form action="">
               <label for="meses">Gasto com:</label>
-              <div id="classeGasto">Padaria: 5,00</div>
-              <select id="classesSelcao" name="meses">
-                <option value="Janeiro">Selecione</option>
-                
-                <option value="Janeiro">Padaria</option>
-                <option value="Fevereiro">Mercado</option>
-                <option value="Março">Lanche na rua</option>
-                <option value="Abril">Cartão de credito</option>
-                <option value="Maio">Transporte</option>
-                <option value="Junho">Internet</option>
-                <option value="Julho">Saúde</option>
-              </select>
-              <input type="number" placeholder="R$">
+              <div><p id="item"></p> <p id="valor"></p></div>
+              <select id="classesDeGasto" name="meses">
+                    <option value="Selecione">Selecione</option>
+                    
+                    <option value="Padaria">Padaria</option>
+                    <option value="Mercado">Mercado</option>
+                    <option value="Lanche na rua">Lanche na rua</option>
+                    <option value="Cartão de credito">Cartão de credito</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Saúde">Saúde</option>
+                </select>
+              <input  type="number" placeholder="R$" id="valorInput">
+              <div class='btn'>Incluir</div>
 
           </form>`      
         
         dias.appendChild(divPai)
 
     }
-
-    let classesDeGasto = document.querySelector('#classesDeGasto')
-    gastoDoDia.addEventListener('blur', function(){
-        return classesDeGasto.value
-    })
-    let classeGasto = document.querySelectorAll('#classeGasto')
-    classeGasto[0].innerHTML=classesDeGasto
     
- 
+let gastoDoDia = document.querySelectorAll('.gastoDoDia')
+
+gastoDoDia.forEach((gasto, index)=>{
+    
+    let gdd = gasto.querySelector('select')
+    let valorInput = gasto.querySelector('#valorInput')
+    let btn = gasto.querySelector('.btn')
+
+        btn.addEventListener('click', function(){
+        
+                let addTexto = gasto.querySelector('#item')
+                addTexto.innerHTML = gdd.value
+
+                let addValor = gasto.querySelector('#valor')
+                addValor.innerHTML = valorInput.value
+                
+                
+        
+            })
+    
+    
+    
+})
+
+

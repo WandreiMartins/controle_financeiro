@@ -301,7 +301,7 @@ body.dark .switch::before{
     border: 2px solid var(--primary-color);
     /* background: var(--primary-color); */
 }
-.gastos .gastoDoDia p{
+.gastos .gastoDoDia .dia{
     padding-left: 10px;
     font-size: 1.1rem;
     color: var(--primary-color);
@@ -329,4 +329,14 @@ body.dark .switch::before{
     outline: none;
     border: none;
     border-bottom: 1px solid var(--text-color);
+}
+.gastos .gastoDoDia .formulario form .btn{
+    width: 60px ;
+    text-align: center;
+    color: var(--sidebar-color);
+    background-color: var(--primary-color);
+    border:none;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
 }
