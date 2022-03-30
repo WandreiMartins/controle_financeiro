@@ -340,3 +340,6 @@ body.dark .switch::before{
     cursor: pointer;
     border-radius: 4px;
 }
+.gastos .gastoDoDia .formulario form .itemValor{
+    display: flex;
+}

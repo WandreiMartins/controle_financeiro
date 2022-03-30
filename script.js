@@ -20,7 +20,13 @@ const body = document.querySelector('body'),
         }
     })
 
+
+// --------------------- tags de gastos -----------------------
+
+    
     let dias = document.querySelector('.gastos')
+    
+    // console.log(tagItem)
     // let gastos01 = gastoDoDia()
     
      for(let i=0; i < 31; i++){
@@ -31,7 +37,7 @@ const body = document.querySelector('body'),
         <div class="formulario">
           <form action="">
               <label for="meses">Gasto com:</label>
-              <div><p id="item"></p> <p id="valor"></p></div>
+              <div class="itemValor"><div id="item"></div> <p id="valor"></p></div>
               <select id="classesDeGasto" name="meses">
                     <option value="Selecione">Selecione</option>
                     
@@ -53,27 +59,35 @@ const body = document.querySelector('body'),
     }
     
 let gastoDoDia = document.querySelectorAll('.gastoDoDia')
-
+let itemArray = []
 gastoDoDia.forEach((gasto, index)=>{
     
     let gdd = gasto.querySelector('select')
     let valorInput = gasto.querySelector('#valorInput')
     let btn = gasto.querySelector('.btn')
-
+    
         btn.addEventListener('click', function(){
         
-                let addTexto = gasto.querySelector('#item')
-                addTexto.innerHTML = gdd.value
+                // let addTexto = gasto.querySelector('#item')
+                // addTexto.innerHTML = 'funciona'
 
-                let addValor = gasto.querySelector('#valor')
-                addValor.innerHTML = valorInput.value
+
+                // let addValor = gasto.querySelector('#valor')
+                // addValor.innerHTML = valorInput.value
+                itemArray.push(gdd.value)
+                // console.log(itemArray)
+                gasto.querySelectorAll('p').forEach(p => p.remove())
+                let tagItem = gasto.querySelector('#item')
+                console.log(tagItem)
+                itemArray.forEach(itens => {
+                let itemTag = `<p id="itemTagP">${itens}</p>`            
+                tagItem.insertAdjacentHTML("afterbegin", itemTag)
                 
+                })         
                 
-        
-            })
-    
-    
-    
+         })
 })
 
 
+
+ 
